@@ -1,9 +1,15 @@
-// 1
+// 2
 
-let requestUser_1 = Number(prompt("Введите первое число:"));
-let requestUser_2 = Number(prompt("Введите второе число:"));
-let sum = requestUser_1 + requestUser_2;
+let choice = prompt("1 - Чай\n2 - Кава\n3 - Сік\n4 - Вода");
 
-if (sum % 5 === 0) {
-  alert("Сумма кратна 5");
-} else alert("Сумма не кратна 5");
+if (choice === "1") {
+  alert("Ви обрали чай");
+} else if (choice === "2") {
+  alert("Ви обрали каву");
+} else if (choice === "3") {
+  alert("Ви обрали сік");
+} else if (choice === "4") {
+  alert("Ви обрали воду");
+} else {
+  alert("Такого напою у нас нема");
+}
