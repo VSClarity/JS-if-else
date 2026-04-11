@@ -1,15 +1,11 @@
-// 2
+// 3
 
-let choice = prompt("1 - Чай\n2 - Кава\n3 - Сік\n4 - Вода");
+let buyValue = Number(prompt("Введите сумму покупки:"));
 
-if (choice === "1") {
-  alert("Ви обрали чай");
-} else if (choice === "2") {
-  alert("Ви обрали каву");
-} else if (choice === "3") {
-  alert("Ви обрали сік");
-} else if (choice === "4") {
-  alert("Ви обрали воду");
-} else {
-  alert("Такого напою у нас нема");
+if (buyValue > 800) {
+  buyValue = buyValue * 0.95;
+} else if (buyValue > 500) {
+  buyValue = buyValue * 0.97;
 }
+
+alert("Итоговая сумма: " + buyValue);
