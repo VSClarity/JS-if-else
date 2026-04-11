@@ -1,11 +1,5 @@
-// 3
+// 4
 
-let buyValue = Number(prompt("Введите сумму покупки:"));
-
-if (buyValue > 800) {
-  buyValue = buyValue * 0.95;
-} else if (buyValue > 500) {
-  buyValue = buyValue * 0.97;
-}
-
-alert("Итоговая сумма: " + buyValue);
+let numberOne = Number(prompt("Напишите первое число"));
+let numberTwo = Number(prompt("Напишите второе число"));
+console.log(numberOne % numberTwo === 0);
