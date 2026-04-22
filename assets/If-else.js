@@ -1,42 +1,59 @@
 // 1
+let firstNumber = prompt("Введите первое число:");
+let secondNumber = prompt("Введите второе число:");
 
-let requestUser_1 = Number(prompt("Введите первое число:"));
-let requestUser_2 = Number(prompt("Введите второе число:"));
-let sum = requestUser_1 + requestUser_2;
+firstNumber = Number(firstNumber);
+secondNumber = Number(secondNumber);
 
-if (sum % 5 === 0) {
-  alert("Сумма кратна 5");
-} else alert("Сумма не кратна 5");
+let sum = firstNumber + secondNumber;
+let divisor = 5;
+
+if (sum % divisor === 0) {
+  alert("Сума кратна 5");
+} else {
+  alert("Сума не кратна 5");
+}
 
 // 2
+function showMenu() {
+  let choice = prompt("1 - Чай\n2 - Кава\n3 - Сік\n4 - Вода");
 
-let choice = prompt("1 - Чай\n2 - Кава\n3 - Сік\n4 - Вода");
-
-if (choice === "1") {
-  alert("Ви обрали чай");
-} else if (choice === "2") {
-  alert("Ви обрали каву");
-} else if (choice === "3") {
-  alert("Ви обрали сік");
-} else if (choice === "4") {
-  alert("Ви обрали воду");
-} else {
-  alert("Такого напою у нас нема");
+  if (choice === "1") {
+    alert("Ви обрали чай");
+  } else if (choice === "2") {
+    alert("Ви обрали каву");
+  } else if (choice === "3") {
+    alert("Ви обрали сік");
+  } else if (choice === "4") {
+    alert("Ви обрали воду");
+  } else {
+    alert("Такого напою у нас нема");
+  }
 }
+
+showMenu();
 
 // 3
+let purchaseAmount = Number(prompt("Введіть суму покупки:"));
 
-let buyValue = Number(prompt("Введите сумму покупки:"));
+let firstDiscountThreshold = 500;
+let secondDiscountThreshold = 800;
 
-if (buyValue > 800) {
-  buyValue = buyValue * 0.95;
-} else if (buyValue > 500) {
-  buyValue = buyValue * 0.97;
+let firstDiscountPercent = 3;
+let secondDiscountPercent = 5;
+
+if (purchaseAmount > secondDiscountThreshold) {
+  purchaseAmount =
+    purchaseAmount - (purchaseAmount * secondDiscountPercent) / 100;
+} else if (purchaseAmount > firstDiscountThreshold) {
+  purchaseAmount =
+    purchaseAmount - (purchaseAmount * firstDiscountPercent) / 100;
 }
 
-alert("Итоговая сумма: " + buyValue);
+alert("Остаточна сума покупки: " + purchaseAmount);
 
 // 4
-let numberOne = Number(prompt("Напишите первое число"));
-let numberTwo = Number(prompt("Напишите второе число"));
+let numberOne = Number(prompt("Введіть перше число:"));
+let numberTwo = Number(prompt("Введіть друге число:"));
+
 console.log(numberOne % numberTwo === 0);
